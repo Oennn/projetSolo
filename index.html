@@ -1,8 +1,83 @@
-<html>
-    <head>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo - Les Pâtes Italiennes</title>
+    <link rel="stylesheet" href="demo2.css">
+</head>
+<body>
+    <nav class="menu">
+        <div class="menu-container">
+            <section class="categorie">
+                <h3>Rubans</h3>
+                <ul class="submenu">
+                    <li><a href="#">Tagliatelle</a></li>
+                    <li><a href="#">Fettuccine</a></li>
+                    <li><a href="#">Lasagne</a></li>
+                </ul>
+            </section>
+            <section class="categorie">
+                <h3>Ficelles</h3>
+                <ul class="submenu">
+                    <li><a href="#">Spaghetti</a></li>
+                    <li><a href="#">Spaghettoni</a></li>
+                    <li><a href="#">Vermicelli</a></li>
+                    <li><a href="#">Capellini</a></li>
+                </ul>
+            </section>
+        </div>
+    </nav>
 
-    </head>
-    <body>
-        
-    </body>
+    <header>
+        <h1>✨ Bienvenue sur ma démo ✨</h1>
+    </header>
+
+    <main class="grosse_div">
+        <!-- Bloc Chien -->
+        <section class="chienp"> 
+            <h2>Notre ami canin</h2>
+            <img src="img/chien.jpg" alt="Image d'un chien adorable">
+            <p>OUAF 🐕</p>
+        </section>
+
+        <!-- Bloc Vidéo -->
+        <section class="tiktok">
+            <h2>Vidéo du moment</h2>
+            <video controls>
+                <source src="vdeo/video.mp4" type="video/mp4">
+                Ton navigateur ne supporte pas la vidéo.
+            </video>
+        </section>
+
+        <!-- Bloc Formulaire -->
+        <section class="formulaireTest">
+            <h2>Contactez-nous</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Nom complet</label>
+                    <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Adresse email</label>
+                    <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Votre message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Écrivez votre message ici..." required></textarea>
+                </div>
+
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <a href="https://www.youtube.com/watch?v=UXdvpKRQsx8" target="_blank">🎥 Découvrir sur YouTube</a>
+    </footer>
+
+    <script src="./demo.js"></script>
+</body>
 </html>
