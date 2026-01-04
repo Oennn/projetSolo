@@ -36,7 +36,7 @@
     <main class="grosse_div">
         <!-- Bloc Chien -->
         <section class="chienp"> 
-            <h2>Notre ami canin</h2>
+            <h2 >Notre ami canin</h2>
             <img src="img/chien.jpg" alt="Image d'un chien adorable">
             <p>OUAF 🐕</p>
         </section>
@@ -56,12 +56,12 @@
             <form>
                 <div class="form-group">
                     <label for="name">Nom complet</label>
-                    <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                    <input type="text" id="name" name="name" placeholder="Votre nom" required autocomplete="name">
                 </div>
 
                 <div class="form-group">
                     <label for="email">Adresse email</label>
-                    <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+                    <input type="email" id="email" name="email" placeholder="votre@email.com" required autocomplete="email">
                 </div>
 
                 <div class="form-group">
@@ -73,11 +73,37 @@
             </form>
         </section>
     </main>
+    
+    
+    
 
     <footer>
         <a href="https://www.youtube.com/watch?v=UXdvpKRQsx8" target="_blank">🎥 Découvrir sur YouTube</a>
+        <button id="msg">pop up</button>
+        <button id="h1modif">h1 modifié</button>
+
+        <div>
+        <input type="text" id="nouveauTitre" placeholder="Écris ton titre ici">
+        <button id="changerH1">Changer le titre</button>
+        </div>
+        <div>
+            <br>
+            <hr>
+            <br>
+            <h2 id="calcul">CALCUL</h2>
+
+             <input type="number" id="oui1" placeholder="Chiffre 1">
+            <input type="number" id="oui2" placeholder="Chiffre 2"><br>
+            <input id="oui3" placeholder="        1: +        |       2: -        |       3: *"><br>
+
+            <button id="chiffre1">Calculer</button>
+            <h2 id="resultat"></h2>
+            
+        </div>
+
+
     </footer>
 
-    <script src="./demo.js"></script>
+    <script src="./index.js"></script>
 </body>
 </html>

@@ -208,6 +208,9 @@ h2 {
     font-size: 1.8em;
     text-align: center;
 }
+#calcul{
+    color:#333;
+}
 
 /* ========================================
    BLOC CHIEN
@@ -302,17 +305,18 @@ button:active {
 }
 
 /* ========================================
-   FOOTER
+   FOOTER AMÉLIORÉ
    ======================================== */
 footer {
     text-align: center;
-    padding: 40px 20px;
-    background: rgba(255, 255, 255, 0.1);
+    padding: 60px 20px;
+    background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
     margin-top: 60px;
 }
 
-footer a {
+/* Lien YouTube */
+footer > a {
     display: inline-block;
     padding: 15px 40px;
     background: white;
@@ -322,13 +326,110 @@ footer a {
     font-weight: 600;
     transition: all 0.3s ease;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 40px;
 }
 
-footer a:hover {
+footer > a:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
+}
+#oui1,
+#oui2,
+#oui3, #nouveauTitre {
+    width: 50%;
+}
+
+
+/* Conteneur des outils interactifs */
+.footer-tools {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Cartes des outils */
+.tool-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+}
+
+.tool-card h3 {
+    color: #667eea;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+/* Boutons du footer */
+.tool-card button {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 0.95em;
+    padding: 12px 20px;
+}
+
+/* Inputs du footer */
+.tool-card input[type="text"],
+.tool-card input[type="number"] {
+    width: 100%;
+    margin-bottom: 15px;
+    background: #f8f9ff;
+}
+
+/* Groupe de calcul */
+.calc-inputs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.calc-inputs input {
+    flex: 1;
+}
+
+/* Résultat du calcul */
+#resultat {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-top: 15px;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    margin: 15px auto;
+    width: fit-content;
+}
+
+#resultat:empty::before {
+    content: "Résultat ici";
+    opacity: 0.5;
+    font-size: 0.8em;
+}
+
+/* Boutons actions rapides */
+.quick-actions {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
 }
 
 /* ========================================
@@ -359,4 +460,13 @@ footer a:hover {
     h2 {
         font-size: 1.5em;
     }
+
+    .footer-tools {
+        grid-template-columns: 1fr;
+    }
+
+    .calc-inputs {
+        flex-direction: column;
+    }
+    
 }
