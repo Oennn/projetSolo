@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exo intermédiaires</title>
+    <link rel="stylesheet" href="./css/page2.css">
+</head>
+<body class="light">
+    <nav class="menu">
+        <div class="menu-container">
+            <section class="categorie">
+                <h3>débutant</h3>
+                <ul class="submenu">
+                    <li><a href="./index.html">index</a></li>
+                    <li><a href="./page1.html">page1</a></li>
+
+                </ul>
+            </section>
+
+        </div>
+    </nav>
+
+
+
+    <ul>Liste d'exo
+        <li>Jeu du nombre mystère</li>
+        <li>Changement de thème (clair / sombre)</li>
+        <li>Barre de recherche filtrante</li>
+        <li>supprimer ligne d'un tableau</li>
+
+    </ul>
+    <br>
+    <br>
+    <br>
+
+
+    <h2>exo 1: nb aléatoire </h2>
+
+    <div>
+    <input type="number" id="guess" placeholder="entrez un nombre entre 1 et 10 !">
+    <button id="btn">Tester</button>
+    <button id="btnR">retry</button>
+    <p id="result"></p>
+    <p id="tries"></p>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <h2>ex 2: Changement de thème (clair / sombre)</h2>
+
+    <div id="ex2">
+    <button id="themeBtn">Changer le thème</button>
+    </div>
+ 
+
+    <br>
+    <br>
+    <br>
+    <h2>ex 3 : barre de recherche filtrante</h2>
+
+    <div class="ex3">
+        <label for="ex3Input">allez rentres moi ça !</label>
+        <input type="text" id="ex3Input" list="list" placeholder="entrez une recherche" >
+        <datalist id="list"></datalist>
+
+        <ul>Liste de fruit
+            <li id="Pomme">Pomme</li>
+            <li id="Banane">Banane</li>
+            <li id="Orange">Orange</li>
+            <li id="Fraise">Fraise</li>
+            <li id="Ananas">Ananas</li>
+            <li id="Mangue">Mangue</li>
+        </ul>
+
+    </div>
+
+
+    <br>
+    <br>
+    <br>
+    <h2>ex 4 : supr une ligne</h2>
+    <div>
+        <table id="tableau" border="1">
+            <tr> <!-- ligne de tableau -->
+                <th>Nom du fruit</th>  <!-- cellule d'en-tête -->
+                <th>Quantité (kg)</th>
+            </tr>
+            <tr> <!-- ligne 1 -->
+                <td>Pomme</td>  <!-- cellule normale -->
+                <td>10</td>
+            </tr>
+            <tr> <!-- ligne 2 -->
+                <td>Banane</td>
+                <td>5</td>
+            </tr>
+            <tr> <!-- ligne 3 -->
+                <td>Orange</td>  <!-- cellule normale -->
+                <td>100</td>
+            </tr>
+            <tr> <!-- ligne 4 -->
+                <td>Fraise</td>  <!-- cellule normale -->
+                <td>1</td>
+            </tr>
+        </table>
+        <input id="ex4Input" placeholder="entre nom de l'ingredient">
+    </div>
+
+
+
+<script src="./js/page2.js"></script>
+</body>
+</html>

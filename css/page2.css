@@ -1,0 +1,139 @@
+/* ========================================
+   NAVIGATION MODERNE
+   ======================================== */
+nav.menu {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 0;
+}
+
+.categorie {
+    position: relative;
+}
+
+.categorie h3 {
+    padding: 20px 35px;
+    margin: 0;
+    cursor: pointer;
+    background: transparent;
+    color: #667eea;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.categorie:hover h3 {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-bottom-color: #764ba2;
+}
+
+/* Sous-menu élégant */
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    list-style: none;
+    min-width: 200px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 0 0 12px 12px;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.categorie:hover .submenu {
+    max-height: 500px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.submenu li {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.submenu li:last-child {
+    border-bottom: none;
+}
+
+.submenu li a {
+    display: block;
+    padding: 15px 25px;
+    color: #555;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.submenu li a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+
+.submenu li a:hover {
+    background: #f8f9ff;
+    color: #667eea;
+    padding-left: 35px;
+}
+
+.submenu li a:hover::before {
+    transform: scaleY(1);
+}
+ul{
+    border: 1px solid;
+    background-color: rgb(48, 145, 224);
+    display: inline-block;
+
+}
+
+div{
+    background-color: rgb(190, 137, 22);
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 10px;
+    display:inline-table;
+}
+.dark {
+  background-color: #222;
+  color: white;
+}
+.light {
+  background-color: #dddddd;
+  color: rgb(0, 0, 0);
+}
+.ex3{
+    display: inline-grid;
+}
+
+#ex3Input{
+    padding-right: 20px;
+}
+table{
+    background-color: rgb(97, 97, 97);
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exo debutants</title>
+    <link rel="stylesheet" href="./css/page1.css">
+</head>
+
+<body>
+    <nav class="menu">
+        <div class="menu-container">
+            <section class="categorie">
+                <h3>débutant</h3>
+                <ul class="submenu">
+                    <li><a href="./index.html">index</a></li>
+                    <li><a href="./page2.html">page2</a></li>
+
+                </ul>
+            </section>
+
+        </div>
+    </nav>
+
+
+
+    
+    <ul>Liste d'exo
+        <li>Chronomètre / minuteur</li>
+        <li>Générateur de nombre aléatoire</li>
+        <li>Vérificateur de mot de passe (longueur, chiffres, majuscules)</li>
+        <li>Compteur de caractères dans un champ texte</li>
+
+    </ul>
+
+    <h2 id="titleChrono">exo 1: chronometre</h2>
+    <div id="ex">
+        <button id="demarrer">demarrer</button>
+        <button id="arreter">arreter</button>
+        <button id="reset">reset chrono</button>
+        <button id="resetJ">reset jeu</button>
+        <p id="cpt">cpt :</p>
+    </div>
+
+
+    <h2>exo 2: Générateur de nombre aléatoire</h2>
+    <div id="ex">
+        <input type="number" id="AleaMin" placeholder="nombre mini">
+        <input type="number" id="AleaMax" placeholder="nombre max">
+        <button id="resultatAlea">cliquer ici</button>
+        <p id="pAlea">nombre aléatoire : </p>
+    </div>
+
+    <h2>exo 3: Vérificateur de mot de passe</h2>
+    <div id="ex3">
+        <ul>Critères du mot de passe
+            <li>Doit contenir entre 5 et 9 caractères</li>
+            <li>Doit contenir au moins un chiffre</li>
+            <li>Doit contenir au moins une majuscule</li>
+            <li>Doit contenir au moins un caractère spécial</li>
+        </ul>
+
+        
+        <input type="text" id="verifMdp" placeholder="Entrez un mot de passe">
+        <button id="resultatMdp">cliquer ici</button>
+
+
+
+    </div>
+    <h2>exo 4: Compteur de caractères dans un champ texte</h2>
+    <div id="ex4">
+        <input type="text" id="nbCaractere" placeholder="Entrez autant de caractère que vous voulez">
+        <button id="resultatnbCaractere">cliquer ici</button>
+    </div>
+    <footer>
+        <br>
+        <br>
+        <br>
+    </footer>
+
+<script src="./js/page1.js"></script>
+</body>
+
+</html>
