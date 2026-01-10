@@ -124,13 +124,7 @@ function changementTheme(){
 
 
 }
-theme.classList.remove("dark", "light") // pour éviter de galerer...
-if(localStorage.getItem("theme") === "dark"){
-    theme.classList.add("dark");
-}
-else{
-    theme.classList.add("light");
-}
+// voir fin de code
 
 document.querySelector("#themeBtn").addEventListener("click",changementTheme);
 
@@ -209,3 +203,63 @@ function verifEntrer(event){
     
 }
 inputT.addEventListener("keydown",verifEntrer);
+
+//==================================================================
+//==================================================================
+
+
+//JSON.stringify() → transforme un objet JS en string
+//JSON.parse() → transforme la string en objet JS
+/*
+let utilisateur = {
+  nom: "Alice",
+  age: 25,
+  score: 120
+};
+localStorage.setItem("utilisateur", JSON.stringify(utilisateur));
+
+let data = localStorage.getItem("utilisateur");
+
+let utilisateurRecupere = JSON.parse(data);
+
+console.log(utilisateurRecupere.nom);   // Alice
+console.log(utilisateurRecupere.score); // 120
+*/
+//====================================================================
+//JavaScript : récupérer ce que l’utilisateur écrit
+
+function sauvegarder() {
+  // Récupération des valeurs tapées par l'utilisateur
+  let nom = document.querySelector("#nomm").value;
+  let age = document.querySelector("#agee").value;
+
+  // Création de l'objet à partir des entrées utilisateur
+  let utilisateur = {
+    nom: nom,
+    age: Number(age)
+  };
+
+  // Sauvegarde dans le localStorage
+  localStorage.setItem("utilisateur", JSON.stringify(utilisateur));
+}
+//====================================================================
+//Récupérer les données au chargement de la page (convention, pas necessaire)
+window.addEventListener("load", () => {
+  let data = localStorage.getItem("utilisateur");
+
+    if (data) {
+        let utilisateur = JSON.parse(data);
+
+        // Remplir les champs avec les données sauvegardées
+        document.querySelector("#nomm").value = utilisateur.nom;
+        document.querySelector("#agee").value = utilisateur.age;
+    }
+    
+    let themeStocke = localStorage.getItem("theme");
+    if(themeStocke){
+
+        theme.classList.remove("dark", "light");
+        theme.classList.add(themeStocke);
+    }
+
+});
